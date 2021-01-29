@@ -4,6 +4,7 @@ import * as express from "express"
 import * as fs from "fs"
 import { describe } from "mocha"
 import * as path from "path"
+import { HttpCode } from "../src/common/http"
 import { PluginAPI } from "../src/node/plugin"
 import * as apps from "../src/node/routes/apps"
 import * as httpserver from "./httpserver"
@@ -82,5 +83,10 @@ describe("plugin", () => {
     })
     ws.terminate()
     assert.strictEqual(message, "hello")
+  })
+
+  it("/test-plugin/error", async () => {
+    const resp = await s.fetch("/test-plugin/error")
+    assert.equal(HttpCode.LargePayload, resp.status)
   })
 })
