@@ -24,6 +24,7 @@ import { IDialogService } from 'vs/platform/dialogs/common/dialogs';
 import Severity from 'vs/base/common/severity';
 import { canceled } from 'vs/base/common/errors';
 import { IUserDataAutoSyncEnablementService, IUserDataSyncResourceEnablementService, SyncResource } from 'vs/platform/userDataSync/common/userDataSync';
+import { isWeb } from 'vs/base/common/platform';
 
 export class ExtensionManagementService extends Disposable implements IWorkbenchExtensioManagementService {
 
@@ -304,17 +305,13 @@ export class ExtensionManagementService extends Disposable implements IWorkbench
 			}
 		}
 
-<<<<<<< HEAD
-		// NOTE@coder: Fall back to installing on the remote server.
-		if (this.extensionManagementServerService.remoteExtensionManagementServer) {
+		// NOTE@coder: Fall back to installing on the remote server on web.
+		if (isWeb && this.extensionManagementServerService.remoteExtensionManagementServer) {
 			return this.extensionManagementServerService.remoteExtensionManagementServer;
 		}
 
-		return undefined;
-=======
 		// Local server can accept any extension. So return local server if not compatible server found.
 		return this.extensionManagementServerService.localExtensionManagementServer;
->>>>>>> 2723b81c450718fecd5f71ccf1ec9945bdb5adbc
 	}
 
 	private async hasToFlagExtensionsMachineScoped(extensions: IGalleryExtension[]): Promise<boolean> {
