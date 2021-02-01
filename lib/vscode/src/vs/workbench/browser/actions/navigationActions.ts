@@ -282,12 +282,3 @@ actionsRegistry.registerWorkbenchAction(SyncActionDescriptor.from(NavigateLeftAc
 actionsRegistry.registerWorkbenchAction(SyncActionDescriptor.from(NavigateRightAction, undefined), 'View: Navigate to the View on the Right', CATEGORIES.View.value);
 actionsRegistry.registerWorkbenchAction(SyncActionDescriptor.from(FocusNextPart, { primary: KeyCode.F6 }), 'View: Focus Next Part', CATEGORIES.View.value);
 actionsRegistry.registerWorkbenchAction(SyncActionDescriptor.from(FocusPreviousPart, { primary: KeyMod.Shift | KeyCode.F6 }), 'View: Focus Previous Part', CATEGORIES.View.value);
-<<<<<<< HEAD
-
-const workbenchRegistry = Registry.as<IWorkbenchContributionsRegistry>(WorkbenchExtensions.Workbench);
-workbenchRegistry.registerWorkbenchContribution(GoHomeContributor, LifecyclePhase.Ready);
-export const _1 = workbenchRegistry;
-export const _2 = GoHomeContributor;
-export const _3 = LifecyclePhase.Ready;
-=======
->>>>>>> 2723b81c450718fecd5f71ccf1ec9945bdb5adbc
