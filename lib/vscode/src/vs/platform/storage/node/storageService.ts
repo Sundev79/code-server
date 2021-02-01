@@ -188,13 +188,8 @@ export class NativeStorageService extends AbstractStorageService {
 		return this.getStorage(scope).getNumber(key, fallbackValue);
 	}
 
-<<<<<<< HEAD
-	store(key: string, value: string | boolean | number | undefined | null, scope: StorageScope): Promise<void> {
+	protected doStore(key: string, value: string | boolean | number | undefined | null, scope: StorageScope): Promise<void> {
 		return this.getStorage(scope).set(key, value);
-=======
-	protected doStore(key: string, value: string | boolean | number | undefined | null, scope: StorageScope): void {
-		this.getStorage(scope).set(key, value);
->>>>>>> 2723b81c450718fecd5f71ccf1ec9945bdb5adbc
 	}
 
 	protected doRemove(key: string, scope: StorageScope): void {
