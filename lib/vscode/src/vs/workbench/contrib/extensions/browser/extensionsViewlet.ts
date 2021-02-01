@@ -32,11 +32,7 @@ import { IProgressService, ProgressLocation } from 'vs/platform/progress/common/
 import { IEditorGroupsService } from 'vs/workbench/services/editor/common/editorGroupsService';
 import Severity from 'vs/base/common/severity';
 import { IActivityService, NumberBadge } from 'vs/workbench/services/activity/common/activity';
-<<<<<<< HEAD
-import { IThemeService, registerThemingParticipant	 } from 'vs/platform/theme/common/themeService';
-=======
-import { IThemeService, ThemeIcon } from 'vs/platform/theme/common/themeService';
->>>>>>> 2723b81c450718fecd5f71ccf1ec9945bdb5adbc
+import { IThemeService, registerThemingParticipant, ThemeIcon } from 'vs/platform/theme/common/themeService';
 import { IConfigurationService } from 'vs/platform/configuration/common/configuration';
 import { IViewsRegistry, IViewDescriptor, Extensions, ViewContainer, IViewDescriptorService, IAddedViewDescriptorRef } from 'vs/workbench/common/views';
 import { IStorageService, StorageScope, StorageTarget } from 'vs/platform/storage/common/storage';
@@ -65,13 +61,10 @@ import { SIDE_BAR_DRAG_AND_DROP_BACKGROUND } from 'vs/workbench/common/theme';
 import { IWorkbenchEnvironmentService } from 'vs/workbench/services/environment/common/environmentService';
 import { WorkbenchStateContext } from 'vs/workbench/browser/contextkeys';
 import { ICommandService } from 'vs/platform/commands/common/commands';
-<<<<<<< HEAD
 import { textLinkForeground } from 'vs/platform/theme/common/colorRegistry';
-=======
 import { isWeb } from 'vs/base/common/platform';
 import { memoize } from 'vs/base/common/decorators';
 import { filterIcon } from 'vs/workbench/contrib/extensions/browser/extensionsIcons';
->>>>>>> 2723b81c450718fecd5f71ccf1ec9945bdb5adbc
 
 const DefaultViewsContext = new RawContextKey<boolean>('defaultExtensionViews', true);
 const SearchMarketplaceExtensionsContext = new RawContextKey<boolean>('searchMarketplaceExtensions', false);
